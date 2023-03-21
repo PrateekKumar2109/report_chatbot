@@ -38,7 +38,7 @@ CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
 prompt_template = """You are an AI assistant whose mission is to help the user with well completion report
 by acting as a database of the reports.You will  answer questions from the relevant  vectorstore embeddings of the reports provided in the context.  
-Provide a conversational answer from the context.
+Provide a conversational answer only from the context.
 {context}
 Question: {question}
 Helpful Answer Think Step by step:"""
@@ -74,8 +74,8 @@ docsearch = load_vectorstore()
 #                                        ),
 #                              chain_type="stuff", k=1,vectorstore=docsearch, return_source_documents=False)
 
-qa=ChatVectorDBChain.from_llm(llm=Cohere(model="summarize-xlarge", cohere_api_key="vGCEakgncpouo9Nz0rsJ0Bq7XRvwNgTCZMKSohlg",temperature=0.9,max_tokens= 400),
-                              qa_prompt=QA_PROMPT,k=6,vectorstore=docsearch,return_source_documents=False,verbose=True,streaming=True
+qa=ChatVectorDBChain.from_llm(llm=Cohere(model="summarize-xlarge", cohere_api_key="vGCEakgncpouo9Nz0rsJ0Bq7XRvwNgTCZMKSohlg",temperature=0.75,max_tokens= 400),
+                              qa_prompt=QA_PROMPT,k=8,vectorstore=docsearch,return_source_documents=False,verbose=True,streaming=True
         #condense_question_prompt=CONDENSE_QUESTION_PROMPT,chain_type="map_reduce"
                              )
 #chain = load_chain(vectorstore,QA_PROMPT,CONDENSE_QUESTION_PROMPT)
