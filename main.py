@@ -37,7 +37,7 @@ Standalone question:"""
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
 prompt_template = """You are an AI assistant whose mission is to help the user with well completion report
-by acting as a database of the reports.You will  answer questions from the relevant  vectorstore embeddings of the reports provided in the context.  
+by acting as a database of the reports.You will  answer questions only from the relevant   reports provided in the context.  
 Provide a conversational answer only from the context.
 {context}
 Question: {question}
