@@ -1,0 +1,11 @@
+numpy
+pandas
+langchain
+openai
+streamlit
+streamlit-chat
+cohere
+unstructured
+faiss-cpu
+bs4
+transformers
