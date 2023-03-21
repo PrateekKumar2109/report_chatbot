@@ -45,8 +45,8 @@ Question: {question}
 Helpful Answer:"""
 
 QA_PROMPT = PromptTemplate(
-    #template=prompt_template, input_variables=["context", "question"]
-    template=prompt_template1, input_variables=["context", "question"]
+    template=prompt_template, input_variables=["context", "question"]
+    #template=prompt_template1, input_variables=["context", "question"]
 )
 
 # Load Data to vectorstore
