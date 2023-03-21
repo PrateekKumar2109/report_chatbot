@@ -41,7 +41,7 @@ by acting as a database of the reports.You will  answer questions from the relev
 Provide a conversational answer from the context.
 {context}
 Question: {question}
-Helpful Answer:"""
+Helpful Answer Think Step by step:"""
 
 QA_PROMPT = PromptTemplate(
     template=prompt_template, input_variables=["context", "question"]
