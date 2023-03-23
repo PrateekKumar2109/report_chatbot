@@ -37,9 +37,10 @@ Standalone question:"""
 CONDENSE_QUESTION_PROMPT = PromptTemplate.from_template(_template)
 
 prompt_template = """You are an AI assistant whose mission is to help the user with well completion report
-by acting as a database of the reports.You will  answer questions only from the relevant   reports provided in the context.  
-Provide a conversational answer only from the context.
-{context}
+by acting as a database of the reports.You will  answer questions only from the relevant  context.
+In the context First name is well name  like R-9A-1,R-13A-5 etc. Questions would be asked related to a well name and 
+you provide a conversational answer only from the context of the relevant well name.
+Context: {context}
 Question: {question}
 Helpful Answer Think Step by step:"""
 
